@@ -32,5 +32,35 @@
 
     </div>
 
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-form">
+                <h1 class="form-title">Add New Book</h1>
+                <form action="" class="add-book-form" id="add-book">
+                    <div class="modal-input-field">
+                        <input type="text" name="title" id="book-title" class="modal-form-input" placeholder="Title" maxlength="50" required>
+                    </div>
+                    <div class="modal-input-field">
+                        <input type="text" name="author" id="book-author" class="modal-form-input" placeholder="Author" maxlength="50" required>
+                    </div>
+                    <div class="modal-input-field">
+                        <input type="text" name="pages" id="book-pages" class="modal-form-input" placeholder="Book Pages" min="0" required>
+                        <input type="text" name="read" id="read-pages" class="modal-form-input" placeholder="Read Pages" min="0" required>
+                    </div>
+                    <div class="modal-input-field">
+                        <label for="add-book-cover">
+                            Add book cover.
+                            <input type="file" accept="image/*" name="cover" id="add-book-cover">
+                        </label>
+                    </div>
+                    <div class="submit-modal-form">
+                        <button type="button" class="btn form-cancel-button">Cancel</button>
+                        <button type="submit" class="btn form-add-button">Add Book</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
