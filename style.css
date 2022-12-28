@@ -206,3 +206,15 @@ footer {
     border-top: 2px solid #ebebeb;
     width: 100vw;
 }
+
+.books {
+    display: inline-grid;
+    grid-template: repeat(auto-fill, 319px) / repeat(auto-fill, 225px);
+    justify-content: center;
+    gap: 20px;
+    grid-gap: 20px;
+    padding: 30px 60px;
+    max-width: 1929px;
+    width: 100%;
+    overflow: auto;
+}
