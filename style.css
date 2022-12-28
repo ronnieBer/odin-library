@@ -110,3 +110,49 @@ nav > button:hover {
     text-align: center;
     text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
+
+.hero-input {
+    display: flex;
+    width: auto;
+    height: 59px;
+    margin-top: 52px;
+    margin-bottom: 20px;
+    gap: 2px;
+}
+
+.hero-input > input[type="email"] {
+    width: 415px;
+    height: 59px;
+    border: none;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+.hero-input > input[type="email"]:focus {
+    border: none;
+    outline: none;
+}
+
+.hero-input > button {
+    display: flex;
+    flex-direction: row;
+    width: 208px;
+    height: 59px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.625rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: ease-in-out .03s;
+}
+
+.hero-input > button:hover {
+    background-color: var(--hover-color);
+}
+
+.hero-input .material-icons-round {
+    font-size: 1.5rem;
+}
