@@ -176,3 +176,16 @@ nav > button:hover {
 }
 
 /* Landing Page end */
+
+footer {
+    /* border: 1px solid magenta; */
+    display: flex;
+    position: absolute;
+    height: 5vh;
+    width: 100vw;
+    bottom: 0;
+    color: var(--secondary-color);
+    font-size: .80rem;
+    align-items: center;
+    justify-content: center;
+}
