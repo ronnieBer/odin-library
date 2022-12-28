@@ -44,3 +44,7 @@ nav {
     height: auto;
     margin: 0 auto;
 }
+
+nav a > .logo {
+    width: 130px;
+}
