@@ -371,6 +371,55 @@ footer {
 
 /* Book Back end */
 
+/* Flip Card Start */
+.card {
+    position: relative;
+    width: 225px;
+    height: 319px;
+    perspective: 800px;
+}
+
+.card-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #ebebeb;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.4);
+    
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    -webkit-transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+}
+
+.card:hover .card-content {
+    transform: rotateY( -180deg ) ;
+    transition: transform 0.5s;
+    -webkit-transform: rotateY(-180deg);
+    -webkit-transition: transform 0.5s;
+}
+
+.front,
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+    color: #03446A;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.back {
+    background: #d9d9d9;
+    color: black;
+    transform: rotateY( -180deg );
+    -webkit-transform: rotateY(-180deg);
+}
+/* Flip Card End */
+
 /* Add Book Button */
 .add-book {
     order: 1;
