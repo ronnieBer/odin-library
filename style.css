@@ -286,6 +286,91 @@ footer {
 
 /* Book Front end */
 
+/* Book Back start */
+.book-info {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 319px;
+    padding: 20px;
+}
+
+.book-info > h1 {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 185px;
+    height: 140px;
+}
+.book-info > p {
+    /* border: 1px solid red; */
+    width: 185px;
+    height: 36px;
+    text-align: center;
+}
+
+.input-pages {
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: row;
+    width: 185px; 
+} 
+
+.book-pages {
+    width: 100px;
+}
+
+.book-pages > label,
+.read-pages > label,
+.book-pages > input[type="text"],
+.read-pages > input[type="text"] {
+    width: 82px;
+}
+
+.book-pages > label,
+.read-pages > label {
+    display: flex;
+    justify-content: center;
+    font-size: .625rem;
+    margin-bottom: 5px;
+}
+
+.book-pages > input[type="text"],
+.read-pages > input[type="text"] {
+    font-size: 1rem;
+    text-align: center;
+    padding: 2px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    background: none;
+}
+
+.book-pages > input[type="text"]:focus,
+.read-pages > input[type="text"]:focus {
+    outline: none;
+    border: 1px solid var(--secondary-color);
+}
+
+.control-btn {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 185px;
+    padding: 0 17px;
+}
+
+.control-btn > a {
+    /* border: 1px solid red; */
+    color: #1c1b1f;
+}
+
+/* Book Back end */
+
 /* Add Book Button */
 .add-book {
     order: 1;
