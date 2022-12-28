@@ -219,6 +219,27 @@ footer {
     overflow: auto;
 }
 
+/* Add Book Button */
+.add-book {
+    order: 1;
+    width: 225px;
+    height: 319px;
+    border: 4px dashed var(--secondary-color);
+    border-radius: 10px;
+    background: none;
+    cursor: pointer;
+}
+
+.add-book > .material-icons-round {
+    color: var(--secondary-color);
+    font-size: 5.5rem;
+    transition-duration: 0.5s;
+}
+
+.add-book:hover > .material-icons-round {
+    transform: rotate(90deg);
+}
+
 /* Library Page end */
 
 /* Modal Form start */
