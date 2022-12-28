@@ -189,3 +189,15 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+/* Library Page start */
+
+.book-collections {
+    /* border: 1px solid magenta; */
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 95px 0 40px 0;
+}
