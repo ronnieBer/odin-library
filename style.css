@@ -78,3 +78,17 @@ nav > button:hover {
     background-size: cover;
     background-position: center;
 }
+
+.hero > .overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(
+        50% 37.74% at 50% 50%,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 0.01%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
+    mix-blend-mode: normal;
+    backdrop-filter: blur(2.5px);
+}
