@@ -156,3 +156,23 @@ nav > button:hover {
 .hero-input .material-icons-round {
     font-size: 1.5rem;
 }
+
+.hero-guest {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-guest a {
+    color: white;
+    font-weight: 500;
+    transition: ease-in-out .03s;
+}
+
+.hero-guest a:hover {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* Landing Page end */
