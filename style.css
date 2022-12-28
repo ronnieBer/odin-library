@@ -34,3 +34,13 @@ header {
     padding: 30px 60px;
     z-index: 1;
 }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    max-width: 1809px;
+    height: auto;
+    margin: 0 auto;
+}
