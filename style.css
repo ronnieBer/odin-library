@@ -219,6 +219,73 @@ footer {
     overflow: auto;
 }
 
+/* Book Front start */
+.color-code {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(186, 0, 9, 0.8);
+    width: 225px;
+    height: 75px;
+    z-index: 1;
+}
+
+.book-status {
+    color: white;
+    font-size: 30px;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.book-cover {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 225px;
+    height: 319px;
+    border-radius: 10px;
+}
+
+.cover-image {
+    /* border: 1px solid red; */
+    width: 225px;
+    height: 319px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cover-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 319px;
+    padding: 15px;
+}
+
+.cover-info > h1 {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.8rem;
+    width: 185px;
+    height: 90px;
+}
+
+.cover-info > p {
+    /* border: 1px solid red; */
+    width: 185px;
+    height: 36px;
+    text-align: center;
+}
+
+/* Book Front end */
+
 /* Add Book Button */
 .add-book {
     order: 1;
