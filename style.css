@@ -63,3 +63,18 @@ nav > button {
 nav > button:hover {
     background-color: var(--hover-color);
 }
+
+/* Landing Page start */
+
+.hero {
+    /* border: 1px solid magenta; */
+    position: relative;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 100px 0;
+
+    background-image: url(assets/images/yury-nam-ux1iYpfnTqo-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
