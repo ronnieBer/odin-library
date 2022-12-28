@@ -201,3 +201,8 @@ footer {
     align-items: center;
     padding: 95px 0 40px 0;
 }
+
+.book-collections > .ruler {
+    border-top: 2px solid #ebebeb;
+    width: 100vw;
+}
