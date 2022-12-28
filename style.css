@@ -25,3 +25,12 @@ body {
     height: 100vh;
     background: white;
 }
+
+header {
+    /* border: 1px solid magenta; */
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 30px 60px;
+    z-index: 1;
+}
