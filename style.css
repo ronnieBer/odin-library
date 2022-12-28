@@ -71,6 +71,7 @@ nav > button:hover {
     position: relative;
     display: flex;
     height: 100vh;
+    justify-content: center;
     align-items: center;
     padding: 100px 0;
 
@@ -91,4 +92,13 @@ nav > button:hover {
     );
     mix-blend-mode: normal;
     backdrop-filter: blur(2.5px);
+}
+
+.hero-content {
+    /* border: 1px solid magenta; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 900px;
+    z-index: 1;
 }
