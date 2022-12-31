@@ -35,3 +35,16 @@ const bookFormTitle = document.querySelector('.form-title');
 const bookFormInput = document.querySelectorAll('input');
 const cancelFormBtn = document.querySelector('.form-cancel-button');
 const submitFormBtn = document.querySelector('.form-add-button');
+
+// Create a HTML add new book button
+const createAddNewBookBtn = () => {
+    element = document.createElement('button');
+    element.classList.add('add-book');
+    element.setAttribute('type', 'button');
+    bookShelves.appendChild(element);
+
+    buttonIcon = document.createElement('span');
+    buttonIcon.classList.add('material-icons-round');
+    buttonIcon.textContent = 'add_circle';
+    element.appendChild(buttonIcon);
+}
