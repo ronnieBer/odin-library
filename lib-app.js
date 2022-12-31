@@ -26,3 +26,12 @@ function Book(
 function addBookToLibrary() {
     // do stuff here
 }
+
+// UI Element
+const bookShelves = document.getElementById('book-shelves');
+const modalBookForm = document.querySelector('#modal');
+const bookForm = document.querySelector('form');
+const bookFormTitle = document.querySelector('.form-title');
+const bookFormInput = document.querySelectorAll('input');
+const cancelFormBtn = document.querySelector('.form-cancel-button');
+const submitFormBtn = document.querySelector('.form-add-button');
