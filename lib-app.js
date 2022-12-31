@@ -48,3 +48,8 @@ const createAddNewBookBtn = () => {
     buttonIcon.textContent = 'add_circle';
     element.appendChild(buttonIcon);
 }
+
+// Load Add New Book Button
+window.onload = () => {
+    createAddNewBookBtn();
+}
