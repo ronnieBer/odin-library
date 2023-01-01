@@ -188,7 +188,19 @@ const createBookContainer = () => {
     button3.appendChild(spanIcons3);
 }
 
+// Function to display form
+function displayAddBookForm() {
+    modalBookForm.style.display = 'flex';
+}
+
+// Function to activate add new book button to display the form
+function addNewBook() {
+    const addBookBtn = document.querySelector('.add-book');
+    addBookBtn.onclick = displayAddBookForm;
+}
+
 // Load Add New Book Button
 window.onload = () => {
     createAddNewBookBtn();
+    addNewBook();
 }
