@@ -228,6 +228,12 @@ function assignBookStatus(data, book) {
     }
 }
 
+// Function to assign a random book cover color
+function assignBookCoverColor(book) {
+    const color = "hsl(" + Math.random() * 360 + ", 100%, 75%)";
+    book.bgColor = color;
+}
+
 // Book form event listener at submit
 bookForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -238,6 +244,7 @@ bookForm.addEventListener('submit', (e) => {
     addBookToLibrary(newBook);
     assignBookID(newBook);
     assignBookStatus(bookData, newBook);
+    assignBookCoverColor(newBook);
 
     console.log(newBook);
     console.log('My Library', myLibrary);
