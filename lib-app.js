@@ -23,8 +23,10 @@ function Book(
     this.id = id;
 }
 
-function addBookToLibrary() {
+// Add new book object to myLibrary array
+function addBookToLibrary(book) {
     // do stuff here
+    myLibrary.push(book)
 }
 
 // UI Element
@@ -213,7 +215,10 @@ bookForm.addEventListener('submit', (e) => {
     const bookData = Object.fromEntries(fd); // Transforms a list of key-value pairs into an object
     const newBook = new Book(bookData.title, bookData.author, bookData.pages, bookData.read); // Create a new book object from the book constructor and get the key-value pairs from the book data
 
+    addBookToLibrary(newBook);
+
     console.log(newBook);
+    console.log('My Library', myLibrary);
 })
 
 // Load Add New Book Button
