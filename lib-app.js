@@ -248,6 +248,8 @@ bookForm.addEventListener('submit', (e) => {
 
     console.log(newBook);
     console.log('My Library', myLibrary);
+    
+    hideBookForm();
 })
 
 // Load Add New Book Button
