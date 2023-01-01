@@ -52,10 +52,10 @@ const createAddNewBookBtn = () => {
 }
 
 // Create a HTML Book Container
-const createBookContainer = () => {
+const createBookContainer = (book) => {
     element = document.createElement('div');
     element.classList.add('card');
-    element.dataset.id = '';
+    element.dataset.id = book.id; // ID assigned to book
     bookShelves.appendChild(element);
 
     cardContent = document.createElement('div');
@@ -69,12 +69,12 @@ const createBookContainer = () => {
 
     bookCover = document.createElement('div');
     bookCover.classList.add('book-cover');
-    bookCover.style.backgroundColor = ''; // Book Cover random background color
+    bookCover.style.backgroundColor = book.bgColor; // Book Cover random background color
     front.appendChild(bookCover);
 
     coverImage = document.createElement('img');
     coverImage.classList.add('cover-image');
-    coverImage.setAttribute('src', 'assets/images/413V3sIKSJL._SX331_BO1,204,203,200_.jpg');
+    coverImage.setAttribute('src', '');
     bookCover.appendChild(coverImage);
 
     coverInfo = document.createElement('div');
@@ -82,11 +82,11 @@ const createBookContainer = () => {
 
     coverTitle = document.createElement('h1');
     coverTitle.classList.add('book-title');
-    coverTitle.textContent = ''; // Book Title
+    coverTitle.textContent = book.title; // Book Title
 
     coverAuthor = document.createElement('p');
     coverAuthor.classList.add('book-author');
-    coverAuthor.textContent = ''; // Book Author
+    coverAuthor.textContent = book.author; // Book Author
 
     colorCode = document.createElement('div');
     colorCode.classList.add('color-code');
@@ -109,12 +109,12 @@ const createBookContainer = () => {
 
     bookTitle = document.createElement('h1');
     bookTitle.classList.add('book-title');
-    bookTitle.textContent = 'The Hobbit'; // Book Title
+    bookTitle.textContent = book.title; // Book Title
     bookInfo.appendChild(bookTitle);
 
     bookAuthor = document.createElement('p');
     bookAuthor.classList.add('book-author');
-    bookAuthor.textContent = 'J.R.R. Tolkien'; // Book Author
+    bookAuthor.textContent = book.author; // Book Author
     bookInfo.appendChild(bookAuthor);
 
     inputPages = document.createElement('div');
@@ -134,7 +134,7 @@ const createBookContainer = () => {
     pageInput.setAttribute('type', 'text');
     pageInput.setAttribute('name', 'page-count');
     pageInput.setAttribute('id', 'page-count');
-    pageInput.setAttribute('value', '400'); // Book Pages
+    pageInput.setAttribute('value', book.pages); // Book Pages
     pageInput.setAttribute('readonly', '');
     bookPages.appendChild(pageInput);
 
@@ -151,7 +151,7 @@ const createBookContainer = () => {
     readInput.setAttribute('type', 'text');
     readInput.setAttribute('name', 'read-count');
     readInput.setAttribute('id', 'read-count');
-    readInput.setAttribute('value', '20'); // Read Pages
+    readInput.setAttribute('value', book.read); // Read Pages
     readInput.setAttribute('readonly', '');
     readPages.appendChild(readInput);
 
@@ -234,6 +234,14 @@ function assignBookCoverColor(book) {
     book.bgColor = color;
 }
 
+// Function that loops to myLibrary array and updates the bookshelves
+function updatesBookshelves() {
+    for (let i = 0; i < myLibrary.length; i++) {
+        createBookContainer(myLibrary[i]);
+        // console.log('loop', myLibrary[i]);
+    }
+}
+
 // Book form event listener at submit
 bookForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -245,10 +253,11 @@ bookForm.addEventListener('submit', (e) => {
     assignBookID(newBook);
     assignBookStatus(bookData, newBook);
     assignBookCoverColor(newBook);
+    updatesBookshelves();
 
     console.log(newBook);
     console.log('My Library', myLibrary);
-    
+
     hideBookForm();
 })
 
