@@ -236,10 +236,18 @@ function assignBookCoverColor(book) {
 
 // Function that loops to myLibrary array and updates the bookshelves
 function updatesBookshelves() {
+    resetBookshelves(); // Bug fix (repeated books on the bookshelves)
     for (let i = 0; i < myLibrary.length; i++) {
         createBookContainer(myLibrary[i]);
         // console.log('loop', myLibrary[i]);
     }
+}
+
+// Function to remove the bookshelves content
+function resetBookshelves() {
+    bookShelves.innerHTML = '';
+    createAddNewBookBtn();
+    addNewBook();
 }
 
 // Book form event listener at submit
