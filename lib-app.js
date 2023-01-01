@@ -214,6 +214,20 @@ function assignBookID(book) {
     book.id = newBookID;
 }
 
+// Function to assign book status (READ, READING, NOT READ)
+function assignBookStatus(data, book) {
+    if (data.read === data.pages) { // READ
+        book.isRead = true;
+        book.isReading = false;
+    } else if (data.read === '0') { // NOT READ
+        book.isRead = false;
+        book.isReading = false;
+    } else if (data.read < data.pages || data.read > '0') { // READING
+        book.isRead = false;
+        book.isReading = true;
+    }
+}
+
 // Book form event listener at submit
 bookForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -223,6 +237,7 @@ bookForm.addEventListener('submit', (e) => {
 
     addBookToLibrary(newBook);
     assignBookID(newBook);
+    assignBookStatus(bookData, newBook);
 
     console.log(newBook);
     console.log('My Library', myLibrary);
