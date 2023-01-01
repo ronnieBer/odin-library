@@ -5,9 +5,9 @@ function Book(
     author = 'Unknown',
     pages = '0',
     read = '0',
+    cover = '',
     isRead = false,
     isReading = false,
-    cover = '',
     bgColor = '',
     id = ''
 ) {
@@ -16,9 +16,9 @@ function Book(
     this.author = author;
     this.pages = pages;
     this.read = read;
+    this.cover = cover;
     this.isRead = isRead;
     this.isReading = isReading;
-    this.cover = cover;
     this.bgColor = bgColor;
     this.id = id;
 }
@@ -239,7 +239,7 @@ bookForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const fd = new FormData(bookForm); // Create an empty FormData and populate it from the book form input
     const bookData = Object.fromEntries(fd); // Transforms a list of key-value pairs into an object
-    const newBook = new Book(bookData.title, bookData.author, bookData.pages, bookData.read); // Create a new book object from the book constructor and get the key-value pairs from the book data
+    const newBook = new Book(bookData.title, bookData.author, bookData.pages, bookData.read, bookData.cover); // Create a new book object from the book constructor and get the key-value pairs from the book data
 
     addBookToLibrary(newBook);
     assignBookID(newBook);
