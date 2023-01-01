@@ -188,6 +188,7 @@ const createBookContainer = () => {
     button3.appendChild(spanIcons3);
 }
 
+// Function to hide the book form
 function hideBookForm() {
     modalBookForm.style.display = 'none';
 }
