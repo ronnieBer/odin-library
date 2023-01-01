@@ -195,7 +195,7 @@ function hideBookForm() {
 // Function to display form
 function displayAddBookForm() {
     bookForm.reset(); // Reset form input when displaying the form
-    cancelFormBtn.onclick = hideBookForm; // Activate cancel button when display the form
+    cancelFormBtn.onclick = hideBookForm; // Activate the cancel button when displaying the form
     modalBookForm.style.display = 'flex';
 }
 
