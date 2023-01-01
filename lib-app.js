@@ -206,6 +206,16 @@ function addNewBook() {
     addBookBtn.onclick = displayAddBookForm;
 }
 
+// Book form event listener at submit
+bookForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(bookForm); // Create an empty FormData and populate it from the book form input
+    const bookData = Object.fromEntries(fd); // Transforms a list of key-value pairs into an object
+    const newBook = new Book(bookData.title, bookData.author, bookData.pages, bookData.read); // Create a new book object from the book constructor and get the key-value pairs from the book data
+
+    console.log(newBook);
+})
+
 // Load Add New Book Button
 window.onload = () => {
     createAddNewBookBtn();
