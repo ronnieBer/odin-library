@@ -26,7 +26,7 @@ function Book(
 // Add new book object to myLibrary array
 function addBookToLibrary(book) {
     // do stuff here
-    myLibrary.push(book)
+    myLibrary.push(book);
 }
 
 // UI Element
@@ -208,6 +208,12 @@ function addNewBook() {
     addBookBtn.onclick = displayAddBookForm;
 }
 
+// Function to assign an id to new book
+function assignBookID(book) {
+    const newBookID = myLibrary.indexOf(book);
+    book.id = newBookID;
+}
+
 // Book form event listener at submit
 bookForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -216,6 +222,7 @@ bookForm.addEventListener('submit', (e) => {
     const newBook = new Book(bookData.title, bookData.author, bookData.pages, bookData.read); // Create a new book object from the book constructor and get the key-value pairs from the book data
 
     addBookToLibrary(newBook);
+    assignBookID(newBook);
 
     console.log(newBook);
     console.log('My Library', myLibrary);
