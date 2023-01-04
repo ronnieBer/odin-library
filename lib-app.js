@@ -278,6 +278,16 @@ function displayAddBookForm() {
     bookForm.reset(); // Reset form input when displaying the form
     cancelFormBtn.onclick = hideBookForm; // Activate the cancel button when displaying the form
     modalBookForm.style.display = 'flex';
+    bookFormTitle.textContent = 'Add New Book';
+    submitFormBtn.textContent = 'Add Book';
+}
+
+function displayEditBookForm() {
+    bookForm.reset(); // Reset form input when displaying the form
+    cancelFormBtn.onclick = hideBookForm; // Activate the cancel button when displaying the form
+    modalBookForm.style.display = 'flex';
+    bookFormTitle.textContent = 'Edit Book';
+    submitFormBtn.textContent = 'Update';
 }
 
 // Function to activate add new book button to display the form
