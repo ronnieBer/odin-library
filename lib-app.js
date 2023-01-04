@@ -79,6 +79,7 @@ const createBookContainer = (book) => {
 
     coverInfo = document.createElement('div');
     coverInfo.classList.add('cover-info');
+    bookCover.appendChild(coverInfo);
 
     coverTitle = document.createElement('h1');
     coverTitle.classList.add('book-title');
@@ -205,6 +206,34 @@ const createBookContainer = (book) => {
         bookStatus.textContent = 'READING';
         colorCode.style.backgroundColor = 'rgba(30, 144, 255, 0.8)';
         spanIcons1.textContent = 'visibility';
+    }
+
+    let index = element.getAttribute('data-id'); // Get data id of the book
+    let bookToChange = document.querySelector(`[data-id="${index}"]`); // Target the book that is going to change
+    // console.log('data id', index)
+
+    if (book.cover.name === '') {
+        // console.log('book cover is empty')
+        bookCover.removeChild(coverImage);
+        coverInfo.appendChild(coverTitle);
+        coverInfo.appendChild(coverAuthor);
+    } else {
+        // console.log('book cover is not empty')
+        const reader = new FileReader();
+
+        // Display cover image
+        reader.addEventListener('load', () => {
+            let coverImage = bookToChange.querySelector('.cover-image');
+        
+            // convert image file to base64 string
+            coverImage.src = reader.result;
+        }, false);
+
+        if (book.cover) {
+            reader.readAsDataURL(book.cover);
+        }
+
+        bookCover.removeChild(coverInfo);
     }
 }
 
