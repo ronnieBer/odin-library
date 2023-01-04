@@ -188,6 +188,24 @@ const createBookContainer = (book) => {
     spanIcons3.classList.add('material-icons-outlined');
     spanIcons3.textContent = 'delete';
     button3.appendChild(spanIcons3);
+
+    if (book.isRead === true) {
+        bookStatus.textContent = 'READ';
+        colorCode.style.backgroundColor = 'rgba(34, 139, 34, 0.8)';
+        spanIcons1.textContent = 'visibility';
+    }
+    
+    if (book.isRead === false) {
+        bookStatus.textContent = 'NOT READ';
+        colorCode.style.backgroundColor = 'rgba(186, 0, 9, 0.8)';
+        spanIcons1.textContent = 'visibility_off';
+    } 
+    
+    if (book.isReading === true) {
+        bookStatus.textContent = 'READING';
+        colorCode.style.backgroundColor = 'rgba(30, 144, 255, 0.8)';
+        spanIcons1.textContent = 'visibility';
+    }
 }
 
 // Function to hide the book form
