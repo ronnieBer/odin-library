@@ -261,6 +261,16 @@ const createBookContainer = (book) => {
         }
     })
 
+    // Button to edit book from library
+    button2.addEventListener('click', () => {
+        displayEditBookForm();
+        bookForm.setAttribute("id", index);
+        bookFormInput[0].value = book.title || '';
+        bookFormInput[1].value = book.author || '';
+        bookFormInput[2].value = book.pages || '';
+        bookFormInput[3].value = book.read || '';
+    })
+
     // Button to remove book from library
     button3.addEventListener('click', () => {
         myLibrary.splice(index, 1);
