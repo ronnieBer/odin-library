@@ -260,6 +260,12 @@ const createBookContainer = (book) => {
             myLibrary[index].isRead = false;
         }
     })
+
+    // Button to remove book from library
+    button3.addEventListener('click', () => {
+        myLibrary.splice(index, 1);
+        bookShelves.removeChild(bookToChange);
+    })
 }
 
 // Function to hide the book form
