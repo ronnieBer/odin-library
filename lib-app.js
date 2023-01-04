@@ -354,8 +354,9 @@ bookForm.addEventListener('submit', (e) => {
     const fd = new FormData(bookForm); // Create an empty FormData and populate it from the book form input
     const bookData = Object.fromEntries(fd); // Transforms a list of key-value pairs into an object
     const newBook = new Book(bookData.title, bookData.author, bookData.pages, bookData.read, bookData.cover); // Create a new book object from the book constructor and get the key-value pairs from the book data
+    const isInTheLibrary = myLibrary.some((book) => book.title === newBook.title);
 
-    if (bookFormTitle.textContent === 'Edit Book' || bookFormTitle.textContent === 'Edit Book') {
+    if (isInTheLibrary && bookFormTitle.textContent === 'Edit Book' || !isInTheLibrary && bookFormTitle.textContent === 'Edit Book') {
         let id = e.target.id;
         let editBook = myLibrary.filter((book) => book.id == id)[0];
 
@@ -368,7 +369,7 @@ bookForm.addEventListener('submit', (e) => {
         updatesBookshelves();
     }
 
-    if (bookFormTitle.textContent === 'Add New Book') {
+    if (!isInTheLibrary && bookFormTitle.textContent === 'Add New Book') {
         addBookToLibrary(newBook);
         assignBookID(newBook);
         assignBookStatus(bookData, newBook);
@@ -376,8 +377,13 @@ bookForm.addEventListener('submit', (e) => {
         updatesBookshelves();
     }
 
-    console.log(newBook);
-    console.log('My Library', myLibrary);
+    if (isInTheLibrary && bookFormTitle.textContent === 'Add New Book') {
+        alert('This book already exists in your library');
+        return
+    }
+
+    // console.log(newBook);
+    // console.log('My Library', myLibrary);
 
     hideBookForm();
 })
