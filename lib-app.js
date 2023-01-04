@@ -235,6 +235,31 @@ const createBookContainer = (book) => {
 
         bookCover.removeChild(coverInfo);
     }
+
+    // button to change book status
+    button1.addEventListener('click', () => {
+        let bookStatus = bookToChange.querySelector('.book-status');
+        let colorCode = bookToChange.querySelector('.color-code');
+        let spanIcons1 = bookToChange.querySelector('.material-icons-outlined');
+        let readCount = bookToChange.querySelector('#read-count');
+        let pageCount = bookToChange.querySelector('#page-count');
+
+        if (bookStatus.textContent === 'NOT READ' || bookStatus.textContent === 'READING') {
+            readCount.value = pageCount.value;
+            myLibrary[index].read = pageCount.value;
+            bookStatus.textContent = 'READ';
+            colorCode.style.backgroundColor = 'rgba(34, 139, 34, 0.8)';
+            spanIcons1.textContent = 'visibility';
+            myLibrary[index].isRead = true;
+        } else if (bookStatus.textContent === 'READ' || bookStatus.textContent === 'READING') {
+            readCount.value = 0;
+            myLibrary[index].read = '0';
+            bookStatus.textContent = 'NOT READ';
+            colorCode.style.backgroundColor = 'rgba(186, 0, 9, 0.8)';
+            spanIcons1.textContent = 'visibility_off';
+            myLibrary[index].isRead = false;
+        }
+    })
 }
 
 // Function to hide the book form
