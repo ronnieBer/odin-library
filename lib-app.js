@@ -355,11 +355,26 @@ bookForm.addEventListener('submit', (e) => {
     const bookData = Object.fromEntries(fd); // Transforms a list of key-value pairs into an object
     const newBook = new Book(bookData.title, bookData.author, bookData.pages, bookData.read, bookData.cover); // Create a new book object from the book constructor and get the key-value pairs from the book data
 
-    addBookToLibrary(newBook);
-    assignBookID(newBook);
-    assignBookStatus(bookData, newBook);
-    assignBookCoverColor(newBook);
-    updatesBookshelves();
+    if (bookFormTitle.textContent === 'Edit Book' || bookFormTitle.textContent === 'Edit Book') {
+        let id = e.target.id;
+        let editBook = myLibrary.filter((book) => book.id == id)[0];
+
+        editBook.title = bookData.title;
+        editBook.author = bookData.author;
+        editBook.pages = bookData.pages;
+        editBook.read = bookData.read;
+        editBook.cover = bookData.cover;
+        assignBookStatus(bookData, editBook);
+        updatesBookshelves();
+    }
+
+    if (bookFormTitle.textContent === 'Add New Book') {
+        addBookToLibrary(newBook);
+        assignBookID(newBook);
+        assignBookStatus(bookData, newBook);
+        assignBookCoverColor(newBook);
+        updatesBookshelves();
+    }
 
     console.log(newBook);
     console.log('My Library', myLibrary);
