@@ -4,7 +4,8 @@
 In this third repository from The Odin Project Full Stack JavaScript curriculum under the JavaScript course, I will build a library app using JavaScript, HTML, and CSS.
 
 
-## Learning goal
+### Learning goal
+- Create a Library App using object constructor
 
 
 #### Reflection/Outcome
