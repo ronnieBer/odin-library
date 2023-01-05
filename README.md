@@ -18,7 +18,7 @@ In this third repository from The Odin Project Full Stack JavaScript curriculum 
 Creating this Library App was like a puzzle at first, but after a lot of searching and reading on google, I finally developed the App little by little. I use the NETFLIX UI design as inspiration for this Library App.
 
 
-#### :point_right: Library [Live Demo]()
+#### :point_right: Library [Live Demo](https://ronnieber.github.io/odin-library)
 
 
 #### Image Credit
