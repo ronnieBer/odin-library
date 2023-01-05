@@ -8,6 +8,12 @@ In this third repository from The Odin Project Full Stack JavaScript curriculum 
 - Create a Library App using object constructor
 
 
+### Library App Feature
+- Book cover image upload
+- Assign a random color to the book cover if the image is not uploaded
+- Validate books if exists in the library
+
+
 #### Reflection/Outcome
 
 
