@@ -11,7 +11,7 @@ In this third repository from The Odin Project Full Stack JavaScript curriculum 
 ### Library App Feature
 - Book cover image upload
 - Assign a random color to the book cover if the image is not uploaded
-- Validate books if exists in the library
+- Validate the book if it is already in the library
 
 
 ## Reflection/Outcome
