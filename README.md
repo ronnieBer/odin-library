@@ -14,7 +14,8 @@ In this third repository from The Odin Project Full Stack JavaScript curriculum 
 - Validate books if exists in the library
 
 
-#### Reflection/Outcome
+## Reflection/Outcome
+Creating this Library App was like a puzzle at first, but after a lot of searching and reading on google, I finally developed the App little by little. I use the NETFLIX UI design as inspiration for this Library App.
 
 
 #### :point_right: Library [Live Demo]()
